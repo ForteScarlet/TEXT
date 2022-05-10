@@ -11,3 +11,5 @@ https://fortescarlet.github.io/TEXT?text=<WHAT YOU WANT TO SAY>
 Say: `Hello World` : <https://fortescarlet.github.io/TEXT?text=Hello%20World>
 
 
+## LICENSE
+[The MIT LICENSE](LICENSE)
