@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>
+    const reg = new RegExp("(^|&)text=([^&]*)(&|$)", "i");
+    window.onload = function () {
+        const r = window.location.search.substring(1).match(reg);
+        const textH1 = document.getElementById("text")
+        if (r != null) {
+            textH1.innerText = decodeURIComponent(r[2])
+        } else {
+            textH1.innerText = ""
+        }
+    }
+
+</script>
+<meta charset="UTF-8">
+<title>TEXT</title>
+</head>
+<body>
+    <h1 id="text" style="text-align: center"></h1>
+</body>
+</html>
