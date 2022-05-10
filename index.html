@@ -7,7 +7,7 @@
         const r = window.location.search.substring(1).match(reg);
         const textH1 = document.getElementById("text")
         if (r != null) {
-            textH1.innerText = decodeURIComponent(r[2])
+            textH1.innerText = decodeURIComponent(r[2])?.replace('+', ' ')
         } else {
             textH1.innerText = ""
         }
