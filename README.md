@@ -8,6 +8,6 @@ https://fortescarlet.github.io/TEXT?text=<WHAT YOU WANT TO SAY>
 
 ## e.g.
 
-Say: `Hello World`: <https://fortescarlet.github.io/TEXT?text=Hello%20World>
+Say: `Hello World` : <https://fortescarlet.github.io/TEXT?text=Hello%20World>
 
 
