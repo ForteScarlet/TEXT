@@ -5,9 +5,12 @@
     const reg = new RegExp("(^|&)text=([^&]*)(&|$)", "i");
     window.onload = function () {
         const r = window.location.search.substring(1).match(reg);
-        const textH1 = document.getElementById("text")
+        const textH1 = document.getElementById('text')
+        const title = document.getElementById('title')
         if (r != null) {
-            textH1.innerText = decodeURIComponent(r[2])?.replace('+', ' ')
+            const text = decodeURIComponent(r[2])?.replace('+', ' ')
+            textH1.innerText = text
+            title.innerText = text.substring(0, 6)
         } else {
             textH1.innerText = ""
         }
@@ -15,7 +18,7 @@
 
 </script>
 <meta charset="UTF-8">
-<title>TEXT</title>
+<title id="title">TEXT</title>
 </head>
 <body>
     <h1 id="text" style="text-align: center"></h1>
