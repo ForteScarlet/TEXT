@@ -2,17 +2,17 @@
 <html lang="en">
 <head>
 <script>
-    const reg = new RegExp("(^|&)text=([^&]*)(&|$)", "i");
+    const reg = new RegExp('(^|&)text=([^&]*)(&|$)', 'i');
     window.onload = function () {
         const r = window.location.search.substring(1).match(reg);
-        const textH1 = document.getElementById('text')
-        const title = document.getElementById('title')
         if (r != null) {
+            const textH1 = document.getElementById('text')
+            const title = document.getElementById('title')
             const text = decodeURIComponent(r[2])?.replace('+', ' ')
             textH1.innerText = text
             title.innerText = text.substring(0, 6)
         } else {
-            textH1.innerText = ""
+            window.location.href='https://github.com/ForteScarlet/TEXT'
         }
     }
 
