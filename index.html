@@ -11,7 +11,10 @@
             const title = document.getElementById('title')
             const text = decodeURIComponent(r[2])?.replace('+', ' ')
             textH1.innerText = text
-            title.innerText = text.substring(0, 6)
+
+            if (text?.length > 0) {
+                title.innerText = 'TEXT: ' + text
+            }
         } else {
             if (!window.location?.contains('localhost') && !window.location?.contains('127.0.0.1') && !window.location?.contains('192.168')) {
                 window.location.href = 'https://github.com/ForteScarlet/TEXT'
