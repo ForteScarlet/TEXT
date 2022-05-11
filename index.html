@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<link rel="icon" class="js-site-favicon" type="image/svg+xml" href="https://github.githubassets.com/favicons/favicon.svg">
 <script>
     const reg = new RegExp('(^|&)text=([^&]*)(&|$)', 'i');
     window.onload = function () {
@@ -12,7 +13,9 @@
             textH1.innerText = text
             title.innerText = text.substring(0, 6)
         } else {
-            window.location.href='https://github.com/ForteScarlet/TEXT'
+            if (!window.location?.contains('localhost') && !window.location?.contains('127.0.0.1') && !window.location?.contains('192.168')) {
+                window.location.href = 'https://github.com/ForteScarlet/TEXT'
+            }
         }
     }
 
@@ -21,6 +24,6 @@
 <title id="title">TEXT</title>
 </head>
 <body>
-    <h1 id="text" style="text-align: center"></h1>
+<h1 id="text" style="text-align: center"></h1>
 </body>
 </html>
